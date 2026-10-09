@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Type One | Des idées qui deviennent des projets</title>
+<meta name="description" content="Type One transforme des idées en projets concrets : identité visuelle, vêtements, stickers, projets sur mesure. On en parle?">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&display=swap">
+<style>
+:root{--bg:#f3f1ec;--ink:#111110;--muted:#5d5b55;--line:#d8d4cb;--accent:#ff4a1c;--on-accent:#111110;--field:#fff;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f0f0e;--ink:#f1efe9;--muted:#a09d95;--line:#2a2927;--field:#191917}}
+:root[data-theme="dark"]{--bg:#0f0f0e;--ink:#f1efe9;--muted:#a09d95;--line:#2a2927;--field:#191917}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 clamp(1rem,.95rem + .3vw,1.15rem)/1.6 "Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:0 clamp(20px,5vw,48px)}
+section{padding:clamp(72px,12vw,150px) 0;border-top:1px solid var(--line)}
+h1,h2,h3{margin:0;font-weight:700;letter-spacing:-.035em;line-height:1}
+h2{font-size:clamp(2rem,6vw,4rem);max-width:16ch}
+p{margin:0 0 1em;max-width:58ch}
+.muted{color:var(--muted)}
+.label{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:28px;display:block}
+a{color:inherit}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+.logo{font-weight:800;font-size:1.3rem;letter-spacing:-.04em;text-decoration:none}
+.logo i{font-style:normal;color:var(--accent)}
+.navlink{font-size:.95rem;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px}
+.btn{display:inline-flex;gap:12px;align-items:center;background:var(--accent);color:var(--on-accent);font:700 1rem "Bricolage Grotesque",system-ui,sans-serif;text-decoration:none;padding:16px 26px;border:0;cursor:pointer}
+.btn span{transition:transform .25s}
+.btn:hover span{transform:translateX(5px)}
+.btn:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.alt{display:inline-block;font-weight:600;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:3px}
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:20px 26px;margin-top:40px}
+.hero{border-top:0;padding-top:clamp(56px,10vw,120px)}
+h1{font-size:clamp(2.7rem,10.5vw,7.4rem);font-weight:800;letter-spacing:-.05em;line-height:.95}
+h1 span{display:block}
+h1 span:last-child{color:var(--accent)}
+.hero p{margin-top:34px;font-size:clamp(1.1rem,1rem + .5vw,1.4rem);max-width:44ch}
+.svc{list-style:none;margin:48px 0 0;padding:0}
+.svc li{display:grid;grid-template-columns:1fr;gap:6px 40px;padding:26px 0;border-top:1px solid var(--line);transition:padding-left .3s}
+.svc li:last-child{border-bottom:1px solid var(--line)}
+.svc li:hover{padding-left:12px}
+.svc h3{font-size:clamp(1.3rem,3.2vw,1.9rem);letter-spacing:-.025em}
+.svc p{margin:0;color:var(--muted)}
+@media(min-width:800px){.svc li{grid-template-columns:1fr 1.2fr;align-items:baseline}}
+.note{margin-top:22px;font-size:.95rem;color:var(--muted)}
+.big{font-size:clamp(1.7rem,4.6vw,3.2rem);font-weight:600;letter-spacing:-.03em;line-height:1.1;max-width:22ch}
+.arrive{display:flex;flex-wrap:wrap;gap:6px 0;margin:36px 0 0;padding:0;list-style:none;color:var(--muted);font-size:clamp(1.05rem,2vw,1.35rem)}
+.arrive li::after{content:"/";margin:0 14px;color:var(--accent)}
+.arrive li:last-child::after{content:""}
+.steps{list-style:none;margin:56px 0 0;padding:0;display:grid}
+.steps li{display:grid;grid-template-columns:76px 1fr;gap:6px 18px;padding:26px 0;border-top:1px solid var(--line)}
+.steps li:last-child{border-bottom:1px solid var(--line)}
+.steps b{grid-row:span 2;font-size:clamp(2rem,6vw,3.4rem);letter-spacing:-.05em;color:var(--accent);line-height:1}
+.steps h3{font-size:1.25rem;letter-spacing:-.02em;text-transform:uppercase}
+.steps p{margin:0;color:var(--muted)}
+@media(min-width:800px){.steps{grid-template-columns:repeat(4,1fr);gap:28px}.steps li{display:block;border-top:2px solid var(--ink);border-bottom:0!important;padding-top:20px}.steps b{display:block;margin-bottom:46px}.steps h3{margin-bottom:8px}}
+.work{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:36px 28px;margin-top:48px}
+.work figure{margin:0}
+.work img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;background:var(--line)}
+.work figcaption{margin-top:14px}.work figcaption b{display:block;font-size:1.15rem;letter-spacing:-.02em}
+.empty{margin-top:44px;padding:44px 0;border-top:1px dashed var(--muted);border-bottom:1px dashed var(--muted)}
+.empty p{font-size:clamp(1.2rem,2.6vw,1.7rem);letter-spacing:-.02em;max-width:30ch;margin:0}
+.contact h2{max-width:12ch;font-size:clamp(2.6rem,9vw,6.5rem);letter-spacing:-.05em}
+form{margin-top:48px;max-width:640px}
+label{display:block;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:22px 0 8px}
+input,textarea{width:100%;font:inherit;color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:0;padding:14px}
+textarea{min-height:130px;resize:vertical}
+.fine{font-size:.9rem;color:var(--muted);margin-top:16px}
+footer{padding:36px 0 48px;border-top:1px solid var(--line);font-size:.95rem;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:no-preference){h1 span{animation:up .9s cubic-bezier(.2,.7,.2,1) both}h1 span:nth-child(2){animation-delay:.12s}h1 span:nth-child(3){animation-delay:.24s}@keyframes up{from{opacity:0;transform:translateY(40px)}}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .rv{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="logo" href="#top">Type One<i>.</i></a><a class="navlink" href="#contact">Parler de mon projet</a></div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+<h1><span>Des idées.</span><span>Des projets.</span><span>Des choses qui prennent vie.</span></h1>
+<p>Type One accompagne les personnes et les entreprises dans la création de projets visuels et physiques. Tu arrives avec une idée, on voit jusqu'où on peut l'amener.</p>
+<div class="cta-row"><a class="btn" href="#contact">Parler de mon projet <span>→</span></a><a class="alt" href="#intro">Découvrir Type One</a></div>
+</div></section>
+
+<section id="intro"><div class="wrap rv">
+<span class="label">Type One</span>
+<h2>Pas de catalogue. Des projets.</h2>
+<p style="margin-top:36px">Je ne travaille pas avec une liste de services rigide. Chaque projet commence par une idée et peut aller dans plusieurs directions.</p>
+<p>Tu n'as pas besoin de savoir exactement ce qu'il te faut avant de m'écrire. Tu me parles directement, je prends le temps de comprendre ce que tu veux faire, et on avance à partir de là.</p>
+</div></section>
+
+<section><div class="wrap rv">
+<span class="label">Ce que je peux créer</span>
+<h2>Quelques exemples de départ.</h2>
+<ul class="svc">
+<li><h3>Identité &amp; design</h3><p>Logos, identité visuelle, visuels et direction créative.</p></li>
+<li><h3>Vêtements &amp; merch</h3><p>Chandails, hoodies, broderie, impression et produits personnalisés.</p></li>
+<li><h3>Stickers &amp; impression</h3><p>Autocollants, étiquettes et matériel promotionnel.</p></li>
+<li><h3>Projets sur mesure</h3><p>Un besoin qui ne rentre dans aucune catégorie? Parlons-en.</p></li>
+</ul>
+<p class="note">Ce sont des exemples, pas une liste fermée.</p>
+</div></section>
+
+<section><div class="wrap rv">
+<span class="label">Et si ton projet n'existe pas encore?</span>
+<p class="big">Pas besoin d'un plan parfait pour commencer.</p>
+<p style="margin-top:28px">Une conversation suffit. On regarde ensuite ce qui est possible. Tu peux arriver avec :</p>
+<ul class="arrive"><li>une idée</li><li>un problème</li><li>une inspiration</li><li>un produit à créer</li><li>une identité à développer</li><li>l'envie de faire quelque chose de différent</li></ul>
+<div class="cta-row"><a class="btn" href="#contact">Commencer une conversation <span>→</span></a></div>
+</div></section>
+
+<section><div class="wrap">
+<span class="label rv">Comment ça fonctionne</span>
+<h2 class="rv">Quatre étapes, simples.</h2>
+<ol class="steps rv">
+<li><b>01</b><h3>On parle</h3><p>Tu me racontes ton idée, ton entreprise ou ton besoin.</p></li>
+<li><b>02</b><h3>On imagine</h3><p>On regarde ensemble ce qu'on pourrait créer et comment le réaliser.</p></li>
+<li><b>03</b><h3>On construit</h3><p>On transforme l'idée en quelque chose de concret.</p></li>
+<li><b>04</b><h3>On va plus loin</h3><p>Un projet terminé peut devenir le début du prochain.</p></li>
+</ol>
+</div></section>
+
+<section><div class="wrap rv">
+<span class="label">Type One est en construction</span>
+<h2>En construction. Et c'est voulu.</h2>
+<p style="margin-top:36px">Je ne veux pas bâtir une entreprise limitée par une liste de services. Je veux construire quelque chose qui évolue avec les projets, les personnes et les idées que je croise.</p>
+<p>Aujourd'hui, ça peut être un chandail, une identité visuelle ou une série de stickers. Demain, ça pourrait être complètement autre chose.</p>
+<p><b>C'est justement ce qui m'intéresse.</b></p>
+</div></section>
+
+<section><div class="wrap rv">
+<span class="label">Projets</span>
+<h2>Ce qu'on a déjà fait.</h2>
+<div id="work" class="work"></div>
+<div id="empty" class="empty" hidden><p>Les premiers projets arrivent. Le prochain pourrait être le tien.</p></div>
+</div></section>
+
+<section class="contact" id="contact"><div class="wrap rv">
+<h2>Tu as une idée?</h2>
+<p style="margin-top:32px;font-size:1.25rem">Même si elle n'est pas encore bien définie, viens m'en parler.</p>
+<p><b>Une première conversation peut être le début de quelque chose de beaucoup plus grand.</b></p>
+<form id="f">
+<label for="nom">Ton nom</label><input id="nom" autocomplete="name" required>
+<label for="mail">Ton courriel</label><input id="mail" type="email" autocomplete="email" required>
+<label for="idea">Ton idée, même floue</label><textarea id="idea" required></textarea>
+<p style="margin-top:28px;margin-bottom:0"><button class="btn" type="submit">Parler de mon projet <span>→</span></button></p>
+<p class="fine">Ça ouvre ton courriel avec le message prêt. Tu peux y joindre un logo, une image, une inspiration.</p>
+</form>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© Type One</span><a id="mailto" href="#"></a></div></footer>
+
+<script>
+/* ===== À MODIFIER ICI =====
+   email : l'adresse qui reçoit les messages
+   projects : tes projets, un bloc { } par projet. Exemple :
+   { title:"Nom du projet", type:"Hoodies brodés", image:"images/projet1.jpg" }
+   (mets tes photos dans un dossier "images" à côté de index.html)
+   Tant que la liste est vide, la section affiche un message simple. */
+var CONFIG = {
+  email: "typeoneprint@gmail.com",
+  projects: []
+};
+/* ===== FIN ===== */
+
+document.documentElement.classList.add('js');
+var m=document.getElementById('mailto');m.href='mailto:'+CONFIG.email;m.textContent=CONFIG.email;
+
+var box=document.getElementById('work');
+if(CONFIG.projects.length){
+  CONFIG.projects.forEach(function(p){
+    var f=document.createElement('figure'),i=document.createElement('img'),c=document.createElement('figcaption'),b=document.createElement('b'),s=document.createElement('span');
+    i.src=p.image;i.alt=p.title;i.loading='lazy';b.textContent=p.title;s.textContent=p.type||'';s.className='muted';
+    c.appendChild(b);c.appendChild(s);f.appendChild(i);f.appendChild(c);box.appendChild(f);
+  });
+}else{box.hidden=true;document.getElementById('empty').hidden=false;}
+
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  var v=function(x){return document.getElementById(x).value};
+  var body='Nom : '+v('nom')+'\nCourriel : '+v('mail')+'\n\n'+v('idea');
+  location.href='mailto:'+CONFIG.email+'?subject='+encodeURIComponent('Un projet avec Type One - '+v('nom'))+'&body='+encodeURIComponent(body);
+});
+
+var els=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){
+  var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+  els.forEach(function(x){io.observe(x)});
+}else{els.forEach(function(x){x.classList.add('in')})}
+</script>
+</body>
+</html>
